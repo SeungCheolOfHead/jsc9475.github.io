@@ -5,7 +5,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
         <title>Media</title>
         <style>
-            
+
             .container {
                 margin-top: 50px;
                 margin-left: 50px;
@@ -20,9 +20,20 @@
             .left_bar{
                 background: green;
                 position: fixed;
-                left: 0; top: 51px; bottom: 0;
+                right: 0; top: 51px; bottom: 0;
                 border: solid 1px;
                 width :50px
+            }
+            #menu {
+                width: 260px;
+                float: left;
+            }
+            @media screen and (max-width:767px) {
+                body {width: auto}
+                #menu {
+                    width:auto; float: none;
+                }
+                #section {width: auto; float: none;}
             }
         </style>
     </head>
@@ -30,8 +41,20 @@
         <div class="top_bar"></div>
         <div class="left_bar"></div>
         <div class="container">
-            <h1><center>SeungCheol's Shopping Mall</center></h1>
-            <p>My Shopping Mall is so expensive! I like money!</p>
+            <div id="section">
+                <h1><center><a href="#">SeungCheol's Shopping Mall</a></center></h1>
+                <p>My Shopping Mall is so expensive! I like money!</p>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#">구매</a></li>
+                <li><a href="#">판매</a></li>
+                <li><a href="#">환불</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">항의전화</a></li>
+                <li><a href="#">신고</a></li>
+            </ul>
         </div>
     </body>
 </html>
